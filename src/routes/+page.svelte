@@ -26,7 +26,7 @@
 <style>
   @font-face {
     font-family: 'titleFont';
-    src: url('$lib/fonts/font-5.ttf');
+    src: url('$lib/fonts/font-10.ttf');
   }
   @font-face {
     font-family: 'headerFont';
@@ -34,10 +34,10 @@
   }
   @font-face {
     font-family: 'data';
-    src: url('$lib/fonts/font-3.otf');
+    src: url('$lib/fonts/font-9.ttf');
   }
   @font-face {
     font-family: 'subdata';
-    src: url('$lib/fonts/font-6.ttf');
+    src: url('$lib/fonts/font-8.ttf');
   }
 </style>

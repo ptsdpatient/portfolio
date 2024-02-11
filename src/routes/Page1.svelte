@@ -22,6 +22,8 @@
     { id: 7,icon:adhyayaIcon, name: 'Adhyaaya24',description:'My work on my college tech fest website. My senior Devansh Parapalli made it in sveltekit, I simply made a few improvements, glad to work as i got an opportunity to show off my skills and enter into domain of svelte.',link:'https://adh24.vercel.app/'},
     { id: 8,icon:neoadhIcon, name: 'NeoAdhyaaya25',description:'Repository for future adhyaaya members. I worked on svelte from scratch in one day so that we could cope up with the routing problem in the main site',link:'https://neo-adhyaaya24.vercel.app/'}
 ];
+
+
     const handleresize=()=>{
         mobile=window.innerWidth<1024;
     }
@@ -38,8 +40,8 @@
         <div class="w-1/2 flex mx-auto justify-around " ><img src={standing} style="height:{mobile?'50vh':'100vh'};" alt="myself standing"></div>
         <div class="w-{mobile?'4/5 mx-auto':'full'} flex flex-col">
             <p class="text-{mobile?'2xl':'5xl'} mx-auto" style="font-family:titleFont;text:center;align:center"> Hello there👋</p>
-            <p class="text-{mobile?'':'xl'}" style="{mobile?'font-size:11px':''};font-family:data;align:center">Myself Tanishq Dhote, I have many interests, I am a meme page admin, a game developer, a web developer, a video game enthusiast and a script writer.</p>
-            <p class="text-{mobile?'':'xl'} mt-{mobile?'2':'10'}" style="{mobile?'font-size:11px':''};font-family:data;align:center">I am well versed with Svelte stack, MERN stack, Java(libGDX) for making crossplatform games and Python for automation, datascience and backend. </p>
+            <p class="text-{mobile?'sm':'2xl'}" style="{mobile?'font-size:xl':''};font-family:data;align:center">Myself Tanishq Dhote, I have many interests, I am a meme page admin, a game developer, a web developer, a video game enthusiast and a script writer.</p>
+            <p class="text-{mobile?'sm':'2xl'} mt-{mobile?'2':'10'}" style="{mobile?'font-size:xl':''};font-family:data;align:center">I am well versed with Svelte stack, MERN stack, Java(libGDX) for making crossplatform games and Python for automation, datascience and backend. </p>
             
         </div>
 
@@ -47,11 +49,11 @@
 
     <div class="w-full md:w-4/5 mx-auto flex flex-col md:justify-between md:pt-20 px-30 " >
         <p class="text-{mobile?'3xl':'5xl'} mx-auto my-5" style="font-family:titleFont;text:center;align:center"> My projects 💻</p>
-        <div class="w-auto p-2 flex flex-row gap-10" style="overflow-x:auto">
+        <div class="w-auto p-2 flex flex-row gap-10" style="overflow-x:auto;cursor:grab">
             {#each projects as project (project.id)}
-                <div class="projectCard" style="min-width: {mobile?'50vw':'30vw'};cursor:grab">
+                <div class="projectCard" style="min-width: {mobile?'50vw':'10vw'};">
                 <button on:click={()=>window.open(project.link)}><img src={project.icon} alt={project.name}></button>
-                <h3 class="text-2xl" style="font-family:headerFont">{project.name}</h3>
+                <h3 class="text-{mobile?'xl':'2xl'}" style="font-family:headerFont">{project.name}</h3>
                 
                 </div>
             {/each}
