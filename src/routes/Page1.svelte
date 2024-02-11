@@ -11,8 +11,8 @@
     });
 </script>
 
-<div  id="tanishqdhote" class="w-full  justify-around" style="height:100vh;user-select:none">
-    <div class="w-full md:w-4/5 mx-auto flex flex-col md:flex-row md:justify-between pt-20 md:pt-20 px-30" style="height:{mobile?'50vh':'100vh'}">
+<div  id="tanishqdhote" class="w-full  justify-around" style="user-select:none">
+    <div class="w-full md:w-4/5 mx-auto flex flex-col md:flex-row md:justify-between pt-20 md:pt-20 px-30" style="height:{mobile?'100vh':'100vh'}">
         
         <div class="w-1/2 flex mx-auto justify-around " ><img src={standing} style="height:{mobile?'50vh':'100vh'};" alt="myself standing"></div>
         <div class="w-{mobile?'4/5 mx-auto':'full'} flex flex-col">
