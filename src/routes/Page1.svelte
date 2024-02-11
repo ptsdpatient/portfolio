@@ -14,6 +14,16 @@
     import chaiIcon from '$lib/project/7.jpg?url'
     import neoadhIcon from '$lib/project/8.jpg?url'
 
+    import manga1 from '$lib/manga/1.jpg'
+    import manga2 from '$lib/manga/2.jpg'
+    import manga3 from '$lib/manga/3.jpg'
+    import manga4 from '$lib/manga/4.jpg'
+    import manga5 from '$lib/manga/5.jpg'
+    import manga6 from '$lib/manga/6.jpg'
+    import manga8 from '$lib/manga/8.jpg'
+ 
+
+
     let mobile=false;
     const projects = [
     { id: 1,icon:mpIcon, name: 'Microplast Polytex', description: 'Successfully completing the Microplast Polytex website fueled my passion for creating meaningful digital experiences, reinforcing my commitment to excellence as a web developer and anticipating further growth in my journey.',link:'https://www.microplastwovens.com/' },
@@ -24,8 +34,16 @@
     { id: 6,icon:chaiIcon, name: 'Chai Wala', description: 'Navigate inflation challenges, craft diverse teas, set prices, and build relationships as a stranded time traveler in "Time Tea-traveler," a captivating tea stall simulation game set in Nagpur, India, immersing yourself in the citys cultural tapestry to rewrite your destiny and thrive, available on itch.io.',link:'https://tanishqdhote.itch.io/chaiwala'},
     { id: 7,icon:adhyayaIcon, name: 'Adhyaaya24',description:'My work on my college tech fest website. My senior Devansh Parapalli made it in sveltekit, I simply made a few improvements, glad to work as i got an opportunity to show off my skills and enter into domain of svelte.',link:'https://adh24.vercel.app/'},
     { id: 8,icon:neoadhIcon, name: 'NeoAdhyaaya25',description:'Repository for future adhyaaya members. I worked on svelte from scratch in one day so that we could cope up with the routing problem in the main site',link:'https://neo-adhyaaya24.vercel.app/'}
-];
-
+    ];
+    const mangas=[
+        { id:1,icon:manga1,name:'' },
+        { id:2,icon:manga2, name:'' },
+        { id:3,icon:manga3,name:'' },
+        { id:4,icon:manga4,name:'' },
+        { id:5,icon:manga5,name:'' },
+        { id:6,icon:manga6, name:'' },
+        { id:8,icon:manga8,name:'' },
+    ]
 
     const handleresize=()=>{
         mobile=window.innerWidth<1024;
@@ -47,7 +65,7 @@
         
         <div class="w-4/5 md:w-2/5 bg-blue flex mx-auto justify-around " ><img src={standing}  alt="myself standing"></div>
         <div class="w-full md:w-3/5 px-10 mx-auto flex flex-col">
-            <p class="text-{mobile?'2xl':'5xl'} mx-auto" style="font-family:titleFont;text:center;align:center"> Hello there👋</p>
+            <p class="text-{mobile?'3xl':'5xl'} mx-auto" style="font-family:titleFont;text:center;align:center"> Hello there👋</p>
             <p class="text-{mobile?'sm':'2xl'}" style="{mobile?'font-size:xl':''};font-family:data;align:center">Myself Tanishq Dhote, I have many interests, I am a meme page admin, a game developer, a web developer, a video game enthusiast and a script writer.</p>
             <p class="text-{mobile?'sm':'2xl'} mt-{mobile?'2':'10'}" style="{mobile?'font-size:xl':''};font-family:data;align:center">I am well versed with Svelte stack, MERN stack, Java(libGDX) for making crossplatform games and Python for automation, datascience and backend. </p>
             
@@ -59,11 +77,12 @@
         <p class="text-{mobile?'3xl':'5xl'} mx-auto my-5" style="font-family:titleFont;text:center;align:center"> My projects 💻</p>
        
         <div class="swiper-container">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper ">
               {#each projects as project (project.id)}
-                <div class="swiper-slide h-full" style="min-width: {mobile?'50vw':'20vw'};">
+                <div class="swiper-slide h-full" style="min-width: {mobile?'auto':'auto'};">
                   <div class="project-card">
-                    <div class="projectCard" style="min-width: {mobile?'50vw':'10vw'};">
+                    <div class="projectCard" style="min-width: {mobile?'50vw':'20vw'};">
+                        <h3 class="text-{mobile?'xl':'2xl'}" style="font-family:headerFont">{project.id}</h3>
                         <button on:click={()=>window.open(project.link)}><img src={project.icon} alt={project.name}></button>
                         <h3 class="text-{mobile?'xl':'2xl'}" style="font-family:headerFont">{project.name}</h3>
                     </div>        
@@ -73,7 +92,23 @@
             </div>
           </div>
      
-        
+          <p class="text-{mobile?'3xl':'5xl'} mx-auto my-5" style="font-family:titleFont;text:center;align:center"> My Hobies 📚📖</p>
+          <p class="text-{mobile?'sm':'2xl'} w-4/5 md:w-full text-center mx-auto" style="{mobile?'font-size:xl':''};font-family:data;align:center">My primary reason to join a technical stream was to make something creative of my own, I would watch anime and read manga after which I got into making mini games based off their concepts. Mangas are one of the best things out there that shaped my mind during my childhood and time transitioning to adulthood, they are not only exhilerating but also give us space to imagine how things are happening giving us a special and creative opportunity to imagine the scene. There are good mangas and bad mangas but which I continued reading were the only ones that would have some special characteristics in them. Few of my favorite mangas are : </p>
+          
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              {#each mangas as manga (manga.id)}
+                <div class="swiper-slide h-full" style="min-width: {mobile?'50vw':'20vw'};">
+                  <div class="project-card">
+                    <div class="projectCard" style="min-width: {mobile?'auto':'auto'};">
+                        <img src={manga.icon} alt={manga.name}>
+                        <h3 class="text-{mobile?'xl':'2xl'}" style="font-family:headerFont">{manga.id}</h3>
+                    </div>        
+                  </div>
+                </div>
+              {/each}
+            </div>
+          </div>
 
     </div>
 
@@ -86,11 +121,13 @@
 <style>
   .swiper-container {
     width: 100%;
+    height:20rem;
     overflow: hidden;
   }
 
   .swiper-wrapper {
     display: flex;
+    height:100%;
     transition: transform 0.3s ease-in-out;
   }
 
@@ -102,6 +139,7 @@
   .project-card {
     /* Customize your project card styles */
     padding: 16px;
+    height:100%;
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #fff;
