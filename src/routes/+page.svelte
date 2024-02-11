@@ -28,4 +28,16 @@
     font-family: 'titleFont';
     src: url('$lib/fonts/font-5.ttf');
   }
+  @font-face {
+    font-family: 'headerFont';
+    src: url('$lib/fonts/font-7.ttf');
+  }
+  @font-face {
+    font-family: 'data';
+    src: url('$lib/fonts/font-3.otf');
+  }
+  @font-face {
+    font-family: 'subdata';
+    src: url('$lib/fonts/font-6.ttf');
+  }
 </style>
