@@ -4,6 +4,7 @@
 	import { webVitals } from '$lib/vitals';
 	import Header from './Header.svelte';
 	import './styles.css';
+	
 
 	/** @type {import('./$types').LayoutServerData} */
 	export let data;
@@ -17,10 +18,10 @@
 	}
 </script>
 
-<div class="app">
+<div class="app h-full w-full">
 	<Header />
 
-	<main>
+	<main class="h-full">
 		<slot />
 	</main>
 
@@ -30,6 +31,9 @@
 </div>
 
 <style>
+	 html {
+      scroll-behavior: smooth;
+    }
 	.app {
 		display: flex;
 		flex-direction: column;
@@ -40,7 +44,6 @@
 		flex: 1;
 		display: flex;
 		flex-direction: column;
-		padding: 1rem;
 		width: 100%;
 		max-width: 64rem;
 		margin: 0 auto;

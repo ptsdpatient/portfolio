@@ -1,10 +1,10 @@
+// svelte.config.js
 import adapter from '@sveltejs/adapter-vercel';
 
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
-	kit: {
-		adapter: adapter()
-	}
+export default {
+  // other configurations...
+  kit: {
+    // other kit configurations...
+    adapter: adapter(),
+  },
 };
-
-export default config;

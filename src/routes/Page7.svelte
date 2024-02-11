@@ -1,0 +1,1 @@
+<div id="discord" class="w-full bg-green-500" style="height:100vh"></div>
