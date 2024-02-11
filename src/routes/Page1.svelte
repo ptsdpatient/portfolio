@@ -16,9 +16,9 @@
         
         <div class="w-1/2 flex mx-auto justify-around " ><img src={standing} style="height:{mobile?'50vh':'100vh'};" alt="myself standing"></div>
         <div class="w-{mobile?'4/5 mx-auto':'full'} flex flex-col">
-            <p class="text-{mobile?'2xl':'5xl'}" style="font-family:titleFont;align:center"> Hello there👋</p>
-            <p class="text-{mobile?'':'xl'}" style="{mobile?'font-size:10px':''};font-family:data;align:center">Myself Tanishq Dhote, I have many interests, I am a meme page admin, a game developer, a web developer, a video game enthusiast and a script writer.</p>
-            <p class="text-{mobile?'':'xl'} mt-{mobile?'2':'10'}" style="{mobile?'font-size:10px':''};font-family:data;align:center">I am well versed with Svelte stack, MERN stack, Java(libGDX) for making crossplatform games and Python for automation, datascience and backend. </p>
+            <p class="text-{mobile?'2xl':'5xl'} mx-auto" style="font-family:titleFont;text:center;align:center"> Hello there👋</p>
+            <p class="text-{mobile?'':'xl'}" style="{mobile?'font-size:11px':''};font-family:data;align:center">Myself Tanishq Dhote, I have many interests, I am a meme page admin, a game developer, a web developer, a video game enthusiast and a script writer.</p>
+            <p class="text-{mobile?'':'xl'} mt-{mobile?'2':'10'}" style="{mobile?'font-size:11px':''};font-family:data;align:center">I am well versed with Svelte stack, MERN stack, Java(libGDX) for making crossplatform games and Python for automation, datascience and backend. </p>
             
         </div>
     </div>
