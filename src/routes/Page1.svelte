@@ -1,6 +1,9 @@
 <script>
-    import standing from '$lib/images/tanishq-standing.jpg'
+    import standing from '$lib/images/tanishq.png'
     import {onMount} from 'svelte'
+    import Swiper from 'swiper';
+
+    let swiper;
 
     import mpIcon from '$lib/project/1.jpg?url'
     import danceIcon from '$lib/project/2.jpg?url'
@@ -28,17 +31,22 @@
         mobile=window.innerWidth<1024;
     }
     onMount(()=>{
+
+
       mobile=window.innerWidth<1024;
       window.addEventListener('resize',handleresize)      
-
+      swiper = new Swiper('.swiper-container', {
+      slidesPerView: 'auto',
+      grabCursor: true,  
+    });
     });
 </script>
 
 <div  id="tanishqdhote" class="w-full  justify-around" style="user-select:none">
-    <div class="w-full md:w-4/5 mx-auto flex flex-col md:flex-row md:justify-between pt-20 md:pt-20 px-30" style="height:{mobile?'100vh':'100vh'}">
+    <div class="w-full mx-auto flex flex-col md:flex-row md:justify-between pt-20 md:pt-20">
         
-        <div class="w-1/2 flex mx-auto justify-around " ><img src={standing} style="height:{mobile?'50vh':'100vh'};" alt="myself standing"></div>
-        <div class="w-{mobile?'4/5 mx-auto':'full'} flex flex-col">
+        <div class="w-4/5 md:w-2/5 bg-blue flex mx-auto justify-around " ><img src={standing}  alt="myself standing"></div>
+        <div class="w-3/5 px-10 mx-auto flex flex-col">
             <p class="text-{mobile?'2xl':'5xl'} mx-auto" style="font-family:titleFont;text:center;align:center"> Hello there👋</p>
             <p class="text-{mobile?'sm':'2xl'}" style="{mobile?'font-size:xl':''};font-family:data;align:center">Myself Tanishq Dhote, I have many interests, I am a meme page admin, a game developer, a web developer, a video game enthusiast and a script writer.</p>
             <p class="text-{mobile?'sm':'2xl'} mt-{mobile?'2':'10'}" style="{mobile?'font-size:xl':''};font-family:data;align:center">I am well versed with Svelte stack, MERN stack, Java(libGDX) for making crossplatform games and Python for automation, datascience and backend. </p>
@@ -49,15 +57,21 @@
 
     <div class="w-full md:w-4/5 mx-auto flex flex-col md:justify-between md:pt-20 px-30 " >
         <p class="text-{mobile?'3xl':'5xl'} mx-auto my-5" style="font-family:titleFont;text:center;align:center"> My projects 💻</p>
-        <div class="w-auto p-2 flex flex-row gap-10" style="overflow-x:auto;cursor:grab">
-            {#each projects as project (project.id)}
-                <div class="projectCard" style="min-width: {mobile?'50vw':'10vw'};">
-                <button on:click={()=>window.open(project.link)}><img src={project.icon} alt={project.name}></button>
-                <h3 class="text-{mobile?'xl':'2xl'}" style="font-family:headerFont">{project.name}</h3>
-                
+       
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+              {#each projects as project (project.id)}
+                <div class="swiper-slide h-full" style="min-width: {mobile?'50vw':'20vw'};">
+                  <div class="project-card">
+                    <div class="projectCard" style="min-width: {mobile?'50vw':'10vw'};">
+                        <button on:click={()=>window.open(project.link)}><img src={project.icon} alt={project.name}></button>
+                        <h3 class="text-{mobile?'xl':'2xl'}" style="font-family:headerFont">{project.name}</h3>
+                    </div>        
+                  </div>
                 </div>
-            {/each}
-        </div>
+              {/each}
+            </div>
+          </div>
      
         
 
@@ -70,5 +84,26 @@
 </div>
 
 <style>
+  .swiper-container {
+    width: 100%;
+    overflow: hidden;
+  }
 
+  .swiper-wrapper {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .swiper-slide {
+
+    box-sizing: border-box;
+  }
+
+  .project-card {
+    /* Customize your project card styles */
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+  }
 </style>
