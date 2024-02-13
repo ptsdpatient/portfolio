@@ -72,7 +72,8 @@
         </div>
 
     </div>
-
+    <p class="text-{mobile?'sm':'2xl'} w-full mb-5 text-center mx-auto" style="{mobile?'font-size:xl;width:90%':''};font-family:data;align:center">My primary reason to join a technical stream was to make something creative of my own, I would watch anime and read manga after which I got into making mini games based off their concepts. Mangas are one of the best things out there that shaped my mind during my childhood and time transitioning to adulthood, they are not only exhilerating but also give us space to imagine how things are happening giving us a special and creative opportunity to imagine the scene. There are good mangas and bad mangas but which I continued reading were the only ones that would have some special characteristics in them. Few of my favorite mangas are : </p>
+          
     <div class="w-full md:w-4/5 mx-auto flex flex-col md:justify-between md:pt-20" >
         <p class="text-{mobile?'3xl':'5xl'} mx-auto my-5" style="font-family:titleFont;text:center;align:center"> My projects 💻</p>
        
