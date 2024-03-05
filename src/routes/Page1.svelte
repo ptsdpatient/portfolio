@@ -27,7 +27,7 @@
 
     let mobile=false;
     const projects = [
-    { id: 1,icon:mpIcon, name: 'Microplast Polytex', description: 'Successfully completing the Microplast Polytex website fueled my passion for creating meaningful digital experiences, reinforcing my commitment to excellence as a web developer and anticipating further growth in my journey.',link:'https://www.microplastwovens.com/' },
+    { id: 1,icon:{mpIcon}, name: 'Microplast Polytex', description: 'Successfully completing the Microplast Polytex website fueled my passion for creating meaningful digital experiences, reinforcing my commitment to excellence as a web developer and anticipating further growth in my journey.',link:'https://www.microplastwovens.com/' },
     { id: 2,icon:sintIcon, name: 'Sintext', description: "My Software is a lightweight and user-friendly text editor designed with the MERN stack, providing a joyful coding experience that won't slow down your computer, ideal for code interviews and DSA competitions, allowing you to customize it to suit your preferences and style.",link:'https://tanishqdhote.itch.io/sintext' },
     { id: 3,icon:snowIcon, name: 'Snow Brick', description: 'Dive into the festive joy of "Opium Bird Christmas Quest," a pixelated Brick Breaker game designed with love using Aseprite, LibGDX, and Android Studio, offering holiday magic, custom blocks, twinkling lights, and delightful surprises for players of all ages.',link:'https://tanishqdhote.itch.io/brickbreak' },
     { id: 4,icon:boxIcon, name: 'Box and Blades', description: "Embark on a thrilling platformer adventure in Box and Blades, where you, as a nimble cardboard box hero, must skillfully dodge menacing blades, utilizing transformative abilities like gliding and turning into steel to conquer each level.",link:'https://tanishqdhote.itch.io/box-and-blades'},
@@ -76,11 +76,19 @@
     </div>
 
     <div class="w-5/6 mx-auto flex flex-col">
-      <p class="text-white text-2xl md:text-4xl m-10 mx-auto title text-left" >I am a full stack Web Developer and crossplatform Game Developer</p>
-      <p class="text-white md:text-3xl m-10 mx-auto title"></p>
-
+      <p class="text-white text-2xl md:text-4xl m-10 mb-0 mx-auto title text-left" >I am a full stack Web Developer and crossplatform Game Developer</p>
+      <p class="text-white md:text-3xl m-10 mx-auto title"> I love programming, creating new stories, new concepts for an immersive experience to the users.</p>
     </div>
 
+    <div class="w-5/6 mx-auto flex flex-col">
+      {#each projects as project}
+      <div><img src={project.id} alt=""></div>
+      {/each}
+    
+    </div>
+    
+ 
+    
   </div>
 
 
