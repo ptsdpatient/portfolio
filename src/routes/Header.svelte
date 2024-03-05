@@ -47,7 +47,7 @@ import {onMount} from 'svelte'
 <style>
 	@font-face {
     font-family: 'headerFont';
-    src: url('$lib/fonts/font-.ttf');
+    src: url('$lib/fonts/font-1.ttf');
   }
 
   #instaIcon:hover{
