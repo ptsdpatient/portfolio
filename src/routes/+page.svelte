@@ -14,15 +14,18 @@
 	<link rel="icon" href={pageIcon} />
 	<meta name="description" content="Tanishq Dhote's portfolio website" />
 </svelte:head>
+	<body class="w-full h-full">
+		<Page1/>
+		<Page2/>
+		<Page3/>
+		<Page4/>
+		<Page5/>
+		<Page6/>
+		<Page7/>
+	
 
-	<Page1/>
-	<Page2/>
-	<Page3/>
-	<Page4/>
-	<Page5/>
-	<Page6/>
-	<Page7/>
-
+	</body>
+	
 <style>
   @font-face {
     font-family: 'titleFont';

@@ -13,6 +13,7 @@
     import adhyayaIcon from '$lib/project/6.jpg?url'
     import chaiIcon from '$lib/project/7.jpg?url'
     import neoadhIcon from '$lib/project/8.jpg?url'
+    import bannerImage from '$lib/images/banner.jpg'
 
     import manga1 from '$lib/manga/1.jpg'
     import manga2 from '$lib/manga/2.jpg'
@@ -60,66 +61,34 @@
     });
 </script>
 
-<div  id="tanishqdhote" class="w-full h-auto justify-around" style="user-select:none">
-    <div class="w-full mx-auto flex flex-col md:flex-row md:justify-between pt-20 md:pt-20">
-        
-        <div class="w-4/5 md:w-2/5 bg-blue flex mx-auto justify-around " ><img src={standing}  alt="myself standing"></div>
-        <div class="w-full md:w-3/5 mx-auto flex flex-col">
-            <p class="text-{mobile?'3xl':'5xl'} mx-auto" style="font-family:titleFont;text:center;align:center"> Hello there👋</p>
-            <p class="text-{mobile?'sm':'2xl'} text-center mx-auto" style="{mobile?'font-size:xl;width:90%;':''};font-family:data;"> Myself Tanishq Dhote, I have many interests, I am a game developer, a web developer, a meme page admin, a video game enthusiast and a script writer.</p>
-            <p class="text-{mobile?'sm':'2xl'} mt-{mobile?'2':'10'} text-center mx-auto" style="{mobile?'font-size:xl;width:90%':''};font-family:data;align:center">I am well versed with Svelte stack, MERN stack, Java (libGDX) for making crossplatform games and Python for automation, datascience and backend. </p>
-            
-        </div>
 
+
+
+
+  <div id="tanishqdhote" class="w-full bg-gray-800 flex flex-col ">
+    <div class="relative w-full md:w-2/3 mx-auto pt-20"><img src={bannerImage} class=" absolute" style="z-index:0;" alt=""></div>
+    
+    <div class="w-5/6 md:w-2/3 flex flex-col md:flex-row mx-auto  pt-10">
+      <img src={standing} style="z-index:1" alt="">
+      <div class="w-full flex flex-col justify-end md:pt-0 pt-5">
+        <p class="text-2xl md:text-5xl text-white md:mx-auto title text-left md:text-right"  style="z-index:2;">Hi There! ✌️<br> Myself Tanishq Dhote</p>
+      </div>
     </div>
-    <p class="text-{mobile?'sm':'2xl'} w-full mb-5 text-center mx-auto" style="{mobile?'font-size:xl;width:90%':''};font-family:data;align:center">My primary reason to join a technical stream was to make something creative of my own, I would watch anime and read manga after which I got into making mini games based off their concepts. Mangas are one of the best things out there that shaped my mind during my childhood and time transitioning to adulthood, they are not only exhilerating but also give us space to imagine how things are happening giving us a special and creative opportunity to imagine the scene. There are good mangas and bad mangas but which I continued reading were the only ones that would have some special characteristics in them. Few of my favorite mangas are : </p>
-          
-    <div class="w-full md:w-4/5 mx-auto flex flex-col md:justify-between md:pt-20" >
-        <p class="text-{mobile?'3xl':'5xl'} mx-auto my-5" style="font-family:titleFont;text:center;align:center"> My projects 💻</p>
-       
-        <div class="swiper-container">
-            <div class="swiper-wrapper ">
-              {#each projects as project (project.id)}
-                <div class="swiper-slide h-full" style="min-width: {mobile?'auto':'auto'};">
-                  <div class="project-card">
-                    <div class="projectCard" style="height:{mobile?'18rem':'18rem'};min-width: {mobile?'50vw':'20vw'};">
-                        <h3 class="text-{mobile?'xl':'2xl'}" style="font-family:headerFont">{project.id}</h3>
-                        <button on:click={()=>window.open(project.link)}><img src={project.icon} alt={project.name}></button>
-                        <h3 class="text-{mobile?'xl':'2xl'}" style="font-family:headerFont">{project.name}</h3>
-                    </div>        
-                  </div>
-                </div>
-              {/each}
-            </div>
-          </div>
-     
-          <p class="text-{mobile?'3xl':'5xl'} mx-auto my-5" style="font-family:titleFont;text:center;align:center"> My Hobies 📚📖</p>
-          <p class="text-{mobile?'sm':'2xl'} w-full mb-5 text-center mx-auto" style="{mobile?'font-size:xl;width:90%':''};font-family:data;align:center">My primary reason to join a technical stream was to make something creative of my own, I would watch anime and read manga after which I got into making mini games based off their concepts. Mangas are one of the best things out there that shaped my mind during my childhood and time transitioning to adulthood, they are not only exhilerating but also give us space to imagine how things are happening giving us a special and creative opportunity to imagine the scene. There are good mangas and bad mangas but which I continued reading were the only ones that would have some special characteristics in them. Few of my favorite mangas are : </p>
-          
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              {#each mangas as manga (manga.id)}
-                <div class="swiper-slide" style="min-width: {mobile?'50vw':'20vw'};">
-                  <div class="project-card">
-                    <div class="projectCard" style="height:{mobile?'18rem':'23rem'};min-width: {mobile?'auto':'auto'};">
-                        <img src={manga.icon} alt={manga.name}>
-                        <h3 class="text-{mobile?'xl':'2xl'}" style="font-family:headerFont">{manga.id}</h3>
-                    </div>        
-                  </div>
-                </div>
-              {/each}
-            </div>
-          </div>
+
+    <div class="w-5/6 mx-auto flex flex-col">
+      <p class="text-white text-2xl md:text-4xl m-10 mx-auto title text-left" >I am a full stack Web Developer and crossplatform Game Developer</p>
+      <p class="text-white md:text-3xl m-10 mx-auto title"></p>
 
     </div>
 
+  </div>
 
 
-
-
-</div>
 
 <style>
+  .title{
+    font-family:data;
+  }
   .swiper-container {
     width: 100%;
   
