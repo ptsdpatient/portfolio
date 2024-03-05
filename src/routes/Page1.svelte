@@ -82,7 +82,7 @@
 
     <div class="w-5/6 mx-auto flex flex-col">
       {#each projects as project}
-      <div><img src={project.id} alt=""></div>
+      <div></div>
       {/each}
     
     </div>
