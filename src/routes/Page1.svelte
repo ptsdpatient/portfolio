@@ -108,8 +108,10 @@
       
       {#each tools as tool (tool.id)}
 
-      {#if selectedTool==tool.id}
-      <div class="w-full absolute h-full bg-white flex flex-col" style="z-index:999">
+     
+      <div id="toolBoxTarget" class="absolute w-full" style="z-index:999">
+        {#if selectedTool==tool.id}
+      <div class=" bg-white flex flex-col w-full" style="height:100vh">
         <div id="toolBoxTarget" class="w-full flex flex-row justify-between">
           <div class="w-5/6"><p class="text-6xl text-center">{tool.name}</p></div>
           <div class="w-1/6 flex flex-row justify-end" ><button on:click={()=>{selectedTool=0}} class="mt-5 w-1/3 pr-5">
@@ -117,11 +119,11 @@
           </button>
         </div>
           </div>
-        
-        
       </div>
       {/if}
-
+    </div>
+  
+    {#if selectedTool==0}
       <a href="#toolBoxTarget" class="tools w-3/5 md:w-1/5  gap-5 rounded-2xl bg-white my-5" style="height:15rem">
         <button class='w-full flex h-full py-10 flex-col justify-between' on:click={()=>{selectedTool=tool.id}} >    
     
@@ -129,6 +131,7 @@
         <p class="w-full text-center text-2xl mx-auto">{tool.name}</p>
       </button>
     </a>
+    {/if}
       {/each}
     </div>
   </div>
