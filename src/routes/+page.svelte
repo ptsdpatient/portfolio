@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import pageIcon from '$lib/images/tanishq.png'
 	import Page1 from './Page1.svelte';
 	import Page2 from './Page2.svelte';
@@ -7,6 +7,7 @@
 	import Page5 from './Page5.svelte';
 	import Page6 from './Page6.svelte';
 	import Page7 from './Page7.svelte';
+	
 </script>
 
 <svelte:head>

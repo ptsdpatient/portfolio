@@ -1,0 +1,14 @@
+{
+    "extends": "./.svelte-kit/tsconfig.json",
+    "compilerOptions": {
+      "target": "es2017",
+      "module": "esnext",
+      "moduleResolution": "node",
+      "strict": true,
+      "jsx": "preserve",
+      "esModuleInterop": true
+    },
+    "include": ["src/**/*", "global.d.ts"],
+    "exclude": ["node_modules/*", "__sapper__/*", "public/*"]
+  }
+  
