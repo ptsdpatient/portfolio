@@ -112,7 +112,10 @@
       <div class="w-full absolute h-full bg-white flex flex-col" style="z-index:999">
         <div id="toolBoxTarget" class="w-full flex flex-row justify-between">
           <div class="w-5/6"><p class="text-6xl text-center">{tool.name}</p></div>
-          <div class="w-1/6 flex flex-row justify-end" ><button on:click={()=>{selectedTool=0}} class="mt-5 w-1/4 mx-auto"><img  src="/close.png" alt=""></button></div>
+          <div class="w-1/6 flex flex-row justify-end" ><button on:click={()=>{selectedTool=0}} class="mt-5 w-1/3 pr-5">
+            <img  src="/close.png" alt="">
+          </button>
+        </div>
           </div>
         
         
