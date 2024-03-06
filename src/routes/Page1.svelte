@@ -26,6 +26,16 @@
 
 
     let mobile=false;
+    const tools=[
+      {id:1,icon:'/vscode.png',name:'VS Code',link:'',data:'I have been using vs code from a long time for creating web projects'},
+      {id:2,icon:'/as.png',name:'Android Studio',link:'',data:''},
+      {id:3,icon:'/blender.png',name:'Blender',link:'',data:''},
+      {id:4,icon:'/aseprite.png',name:'Aseprite',link:'',data:''},
+      {id:5,icon:'/canva.png',name:'Canva',link:'',data:''},
+      {id:6,icon:'/cp.png',name:'Clipchamp',link:'',data:''},
+      {id:7,icon:'/gc.png',name:'Google Cloud',link:'',data:''},
+    ]
+
     const projects = [
     { id: 1,icon:{mpIcon}, name: 'Microplast Polytex', description: 'Successfully completing the Microplast Polytex website fueled my passion for creating meaningful digital experiences, reinforcing my commitment to excellence as a web developer and anticipating further growth in my journey.',link:'https://www.microplastwovens.com/' },
     { id: 2,icon:sintIcon, name: 'Sintext', description: "My Software is a lightweight and user-friendly text editor designed with the MERN stack, providing a joyful coding experience that won't slow down your computer, ideal for code interviews and DSA competitions, allowing you to customize it to suit your preferences and style.",link:'https://tanishqdhote.itch.io/sintext' },
@@ -65,35 +75,51 @@
 
 
 
-  <div id="tanishqdhote" class="w-full bg-gray-800 flex flex-col ">
-    <div class="relative w-full md:w-2/3 mx-auto pt-20"><img src={bannerImage} class=" absolute" style="z-index:0;" alt=""></div>
+  <div id="tanishqdhote" class="w-full bg-gray-800 flex flex-col md:pt-0 pt-5">
+    <div class="relative w-full md:w-2/3 mx-auto pt-10 md:pt-20"><img src={bannerImage} class=" absolute" style="z-index:0;" alt=""></div>
     
-    <div class="w-5/6 md:w-2/3 flex flex-col md:flex-row mx-auto  pt-10">
-      <img src={standing} style="z-index:1" alt="">
-      <div class="w-full flex flex-col justify-end md:pt-0 pt-5">
-        <p class="text-2xl md:text-5xl text-white md:mx-auto title text-left md:text-right"  style="z-index:2;">Hi There! ✌️<br> Myself Tanishq Dhote</p>
+    <div class="w-5/6 md:w-2/3 flex flex-col md:flex-row mx-auto pt-10 md:pt-20">
+       <div class="w-full md:w-1/2" style="z-index:1" > <img src={standing} alt=""></div>
+      <div class="w-full md:w-1/2 flex flex-col justify-end md:pt-0 pt-5">
+        <p class="text-2xl md:text-4xl text-white md:mx-auto title text-left md:text-right"  style="z-index:2;">Hi There! ✌️<br> Myself Tanishq Dhote</p>
       </div>
     </div>
 
-    <div class="w-5/6 mx-auto flex flex-col">
-      <p class="text-white text-2xl md:text-4xl m-10 mb-0 mx-auto title text-left" >I am a full stack Web Developer and crossplatform Game Developer</p>
-      <p class="text-white md:text-3xl m-10 mx-auto title"> I love programming, creating new stories, new concepts for an immersive experience to the users.</p>
+    <div class="w-5/6 text-left md:w-4/6 md:text-center mx-auto flex flex-col">
+      <p class="text-white text-2xl md:text-4xl m-10 mb-0 mx-auto title text-left md:text-center" >I am a full stack Web Developer and crossplatform Game Developer</p>
+      <p class="text-white text-2xl md:text-3xl m-10 mx-auto title"> I love programming, developing apps and games, and creating concepts for new gaming experiences.</p>
     </div>
 
     <div class="w-5/6 mx-auto flex flex-col">
-      {#each projects as project}
-      <div></div>
-      {/each}
-    
+      <p class="text-white text-3xl text-center mb-10 md:text-2xl md:text-4xl m-10 mb-0 mx-auto title text-left" >Explore my favorite tools and skills</p>
+     
+     
     </div>
     
  
-    
+    <div class="w-full mx-auto flex flex-wrap gap-5 justify-around ">
+      {#each tools as tool}
+      <button class="tools w-3/5 md:w-1/5 flex flex-col justify-around gap-5 rounded-2xl bg-white px-5 md:px-10 py-10">    
+        <img class="mx-auto" style="max-width:50%" src={tool.icon} alt=""><p class="w-full text-center text-2xl mx-auto">{tool.name}</p>
+      </button>
+      {/each}
+    </div>
   </div>
 
 
 
 <style>
+  .tools{
+    transition: all 0.4s;
+  }
+  .tools:hover{
+    transform: scale(1.1);
+    transition: all 0.4s;
+  }
+  #tanishqdhote{     
+      background-image: url('/pattern2.png');
+      background-repeat: repeat;
+  }
   .title{
     font-family:data;
   }

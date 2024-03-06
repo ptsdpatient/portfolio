@@ -49,7 +49,13 @@ import {onMount} from 'svelte'
     font-family: 'headerFont';
     src: url('$lib/fonts/font-1.ttf');
   }
-
+  a{
+	transition: all 0.4s;
+  }
+  a:hover{
+	transform: scale(0.9);
+	transition: all 0.4s;
+  }
   #instaIcon:hover{
 	
 	background: linear-gradient(45deg, #feda75,#fa7e1e, #d62976,#962fbf,#4f5bd5);
