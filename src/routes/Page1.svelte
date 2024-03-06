@@ -119,10 +119,13 @@
       </div>
       {/if}
 
-      <a href="#toolBoxTarget" class="tools w-3/5 md:w-1/5 flex flex-col justify-around gap-5 rounded-2xl bg-white px-5 md:px-10 py-10"><button on:click={()=>{selectedTool=tool.id}} >    
+      <a href="#toolBoxTarget" class="tools w-3/5 md:w-1/5  gap-5 rounded-2xl bg-white my-5" style="height:15rem">
+        <button class='w-full flex h-full py-10 flex-col justify-between' on:click={()=>{selectedTool=tool.id}} >    
     
-        <img class="mx-auto" style="max-width:50%" src={tool.icon} alt=""><p class="w-full text-center text-2xl mx-auto">{tool.name}</p>
-      </button></a>
+        <img class="mx-auto" style="max-width:50%" src={tool.icon} alt="">
+        <p class="w-full text-center text-2xl mx-auto">{tool.name}</p>
+      </button>
+    </a>
       {/each}
     </div>
   </div>
